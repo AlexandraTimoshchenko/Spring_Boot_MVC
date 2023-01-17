@@ -1,4 +1,4 @@
-package com.example.spring;
+package com.example.spring.controller;
 
 
 import com.example.spring.domain.Message;
@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.Map;
 
 @Controller
-public class GreetingController {
+public class MainController {
     @Autowired
     MessageRepo messageRepo;
-    @GetMapping("/greeting")
+    @GetMapping("/")
     public String greeting(Map<String,Object> model) {
         return "greeting";
     }
